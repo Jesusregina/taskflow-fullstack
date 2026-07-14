@@ -18,6 +18,7 @@ repositories {
 }
 
 dependencies {
+	// sprin-boot-starter
 	implementation("org.springframework.boot:spring-boot-starter")
 	testImplementation("org.springframework.boot:spring-boot-starter-test")
 	testRuntimeOnly("org.junit.platform:junit-platform-launcher")
@@ -26,9 +27,14 @@ dependencies {
 	implementation("org.springframework.boot:spring-boot-starter-data-jpa")
 	implementation("org.springframework.boot:spring-boot-starter-validation")
 
+	// lombok dependencies
 	compileOnly("org.projectlombok:lombok")
 	annotationProcessor("org.projectlombok:lombok")
 
+	// liquibase dependencies
+	implementation("org.liquibase:liquibase-core")
+
+	// mysql connector dependencies
 	runtimeOnly("com.mysql:mysql-connector-j")
 
 	developmentOnly("org.springframework.boot:spring-boot-devtools")
