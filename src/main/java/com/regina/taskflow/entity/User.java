@@ -20,8 +20,8 @@ public class User extends BaseEntity{
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(name = "full_name", nullable = false, length = 100)
-    private String fullName;
+    @Column(name = "user_name", nullable = false, length = 100)
+    private String username;
 
     @Column(nullable = false, unique = true)
     private String email;

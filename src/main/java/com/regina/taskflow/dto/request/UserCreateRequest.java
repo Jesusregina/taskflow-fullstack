@@ -1,9 +1,13 @@
 package com.regina.taskflow.dto.request;
 
+import jakarta.persistence.Column;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Size;
+import lombok.Data;
 
+
+@Data
 public class UserCreateRequest {
 
     @NotBlank(message = "Username is required")

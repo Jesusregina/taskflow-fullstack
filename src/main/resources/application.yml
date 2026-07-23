@@ -3,7 +3,7 @@ spring:
     name: sample
 
   datasource:
-    url: jdbc:mysql://localhost:3306/taskflow_db
+    url: jdbc:mysql://localhost:3307/taskflow_db
     username: root
     password: mysql
 

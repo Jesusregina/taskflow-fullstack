@@ -1,6 +1,6 @@
 plugins {
 	java
-	id("org.springframework.boot") version "4.1.0"
+	id("org.springframework.boot") version "3.5.0"
 	id("io.spring.dependency-management") version "1.1.7"
 }
 
@@ -36,6 +36,8 @@ dependencies {
 
 	// mysql connector dependencies
 	runtimeOnly("com.mysql:mysql-connector-j")
+
+	implementation("org.mariadb.jdbc:mariadb-java-client:3.5.3")
 
 	developmentOnly("org.springframework.boot:spring-boot-devtools")
 }
