@@ -10,7 +10,7 @@ public interface UserService {
 
     UserResponse createUser(UserCreateRequest request);
 
-    UserResponse getUserId(Long id);
+    UserResponse getUserById(Long id);
 
     List<UserResponse> getAllUsers();
 

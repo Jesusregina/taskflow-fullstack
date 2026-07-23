@@ -4,7 +4,9 @@ import com.regina.taskflow.dto.request.UserCreateRequest;
 import com.regina.taskflow.dto.request.UserUpdateRequest;
 import com.regina.taskflow.dto.response.UserResponse;
 import com.regina.taskflow.entity.User;
+import org.springframework.stereotype.Component;
 
+@Component
 public class UserMapper {
 
     public User toEntity(UserCreateRequest request) {
