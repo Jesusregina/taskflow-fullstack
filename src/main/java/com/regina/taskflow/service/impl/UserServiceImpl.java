@@ -4,6 +4,7 @@ import com.regina.taskflow.dto.request.UserCreateRequest;
 import com.regina.taskflow.dto.request.UserUpdateRequest;
 import com.regina.taskflow.dto.response.UserResponse;
 import com.regina.taskflow.entity.User;
+import com.regina.taskflow.exception.ResourceNotFoundException;
 import com.regina.taskflow.mapper.UserMapper;
 import com.regina.taskflow.repository.UserRepository;
 import com.regina.taskflow.service.interfaces.UserService;
@@ -41,7 +42,7 @@ public class UserServiceImpl implements UserService {
     public UserResponse getUserById(Long id) {
 
         User user = userRepository.findById(id)
-                .orElseThrow(() -> new RuntimeException("User not found"));
+                .orElseThrow(() -> new ResourceNotFoundException("User not found with id: " + id));
 
         return userMapper.toResponse(user);
     }

@@ -4,6 +4,7 @@ import com.regina.taskflow.dto.request.TaskCreateRequest;
 import com.regina.taskflow.dto.request.TaskUpdateRequest;
 import com.regina.taskflow.dto.response.TaskResponse;
 import com.regina.taskflow.entity.Task;
+import com.regina.taskflow.exception.ResourceNotFoundException;
 import com.regina.taskflow.mapper.TaskMapper;
 import com.regina.taskflow.repository.TaskRepository;
 import com.regina.taskflow.service.interfaces.TaskService;
@@ -41,7 +42,7 @@ public class TaskServiceImpl implements TaskService {
     public TaskResponse getTaskById(Long id) {
 
         Task task = taskRepository.findById(id)
-                .orElseThrow(() -> new RuntimeException("Task not found"));
+                .orElseThrow(() -> new ResourceNotFoundException("Task not found with id: " + id));
 
         return taskMapper.toResponse(task);
     }
